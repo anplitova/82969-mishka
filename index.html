@@ -167,5 +167,29 @@
         <p class="copyright__text">Разработано <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Разработано в HTML Academy"></a></p>
       </div>
     </footer>
+    <section id="modal-add-cart" class="modal">
+      <button class="modal__close" type="button">Закрыть модальное окно</button>
+      <form class="modal__form form-add-cart" action="https://echo.htmlacademy.ru" method="post">
+        <h2 class="form-add-cart__title">Добавить в корзину</h2>
+        <fieldset>
+          <legend class="form-add-cart__legend">Выберите размер:</legend>
+          <ul class="form-add-cart__checkbox-list">
+            <li class="form-add-cart__checkbox-item">
+              <input class="form-add-cart__checkbox" id="size-s" type="checkbox" name="size" value="s">
+              <label class="form-add-cart__checkbox-label" for="size-s" title="Размер S">S</label>
+            </li>
+            <li class="form-add-cart__checkbox-item">
+              <input class="form-add-cart__checkbox" id="size-m" type="checkbox" name="size" value="m">
+              <label class="form-add-cart__checkbox-label" for="size-m" title="Размер M">M</label>
+            </li>
+            <li class="form-add-cart__checkbox-item">
+              <input class="form-add-cart__checkbox" id="size-l" type="checkbox" name="size" value="l">
+              <label class="form-add-cart__checkbox-label" for="size-l" title="Размер L">L</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button form-add-cart__button" type="submit">Добавить</button>
+      </form>
+    </section>
   </body>
 </html>
