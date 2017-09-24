@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body class="page">
+    <header class="page-header">
+      <div class="page-header__top">
+        <div class="page-header__logo logo">
+          <a class="logo__link" href="index.html">
+            <img class="logo__image" src="http://placehold.it/86x35" alt="Логотип магазина «Mishka»" width="86" height="35">
+          </a>
+        </div>
+        <div class="page-header__main-menu main-menu">
+          <button class="main-menu__button" type="button">Переключить главное меню</button>
+          <nav class="main-menu__nav">
+            <ul class="main-menu__list">
+              <li class="main-menu__item">
+                <a class="main-menu__link">Каталог товаров</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="order-form.html">Вязание на заказ</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Поиск по сайту</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Корзина: пока пуста</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="page-header__bottom page-header__bottom--catalog">
+        <h1 class="page-header__title">Каталог товаров</h1>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="catalog">
+        <article class="catalog__product product">
+          <a class="product__image-link" href="#">
+            <img class="product__image" src="http://placehold.it/260x195" alt="Товар «Зайчик-попрыгайчик»" width="260" height="195">
+          </a>
+          <div class="product__content">
+            <div class="product__description">
+              <h2 class="product__title">
+                <a class="product__link" href="#">Зайчик-попрыгайчик</a>
+              </h2>
+              <span class="product__info">Рост 30 см, вес 200 г</span>
+            </div>
+            <div class="product__buy">
+              <span class="product__price">1 200 руб.</span>
+              <button class="product__button" type="button">Положить товар в корзину</button>
+            </div>
+          </div>
+        </article>
+        <article class="catalog__product product">
+          <a class="product__image-link" href="#">
+            <img class="product__image" src="http://placehold.it/260x195" alt="Товар «Корзинка для белья»" width="260" height="195">
+          </a>
+          <div class="product__content">
+            <div class="product__description">
+              <h2 class="product__title">
+                <a class="product__link" href="#">Корзинка для белья</a>
+              </h2>
+              <span class="product__info">Диаметр 15 см, высота 10 см</span>
+            </div>
+            <div class="product__buy">
+              <span class="product__price">690 руб.</span>
+              <button class="product__button" type="button">Положить товар в корзину</button>
+            </div>
+          </div>
+        </article>
+        <article class="catalog__product product">
+          <a class="product__image-link" href="#">
+            <img class="product__image" src="http://placehold.it/260x195" alt="Товар «Большая корзинка для игрушек»" width="260" height="195">
+          </a>
+          <div class="product__content">
+            <div class="product__description">
+              <h2 class="product__title">
+                <a class="product__link" href="#">Большая корзинка для игрушек</a>
+              </h2>
+              <span class="product__info">Диаметр 30 см, высота 30 см</span>
+            </div>
+            <div class="product__buy">
+              <span class="product__price">1 500 руб.</span>
+              <button class="product__button" type="button">Положить товар в корзину</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="about-work">
+        <article class="about-work__content">
+          <header class="about-work__header">
+            <h2 class="about-work__title">Процесс производства</h2>
+          </header>
+          <video class="about-work__video" width="260" height="150" poster="http://placehold.it/260x150"  preload="none">
+            Тег video не поддерживается вашим браузером.
+            <a href="#">Скачать видео</a>.
+          </video>
+          <div class="about-work__description">
+            <p class="about-work__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+            <a class="button about-work__button" href="order-form.html">Сделать заказ</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__socials socials">
+        <h2 class="visually-hidden">Магазин «Mishka» в социальных сетях</h2>
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a class="socials__link" href="#">Instagram</a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#">Facebook</a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#">Twitter</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__text">Разработано <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></p>
+      </div>
+    </footer>
+
+    <div id="modal-add-cart" class="modal">
+      <button class="modal__close" type="button">Закрыть модальное окно</button>
+      <form class="modal__form form-add-cart" action="https://echo.htmlacademy.ru" method="post">
+        <h2 class="form-add-cart__title">Добавить в корзину</h2>
+        <fieldset class="form-add-cart__fieldset">
+          <legend class="form-add-cart__legend">Выберите размер:</legend>
+          <ul class="form-add-cart__list">
+            <li class="form-add-cart__item">
+              <input class="visually-hidden" id="size-s" type="radio" name="size" value="s">
+              <label class="form-add-cart__label" for="size-s">S</label>
+            </li>
+            <li class="form-add-cart__item">
+              <input class="visually-hidden" id="size-m" type="radio" name="size" value="m">
+              <label class="form-add-cart__label" for="size-m">M</label>
+            </li>
+            <li class="form-add-cart__item">
+              <input class="visually-hidden" id="size-l" type="radio" name="size" value="l">
+              <label class="form-add-cart__label" for="size-l">L</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button form-add-cart__button" type="submit">Добавить</button>
+      </form>
+    </div>
+  </body>
+</html>
