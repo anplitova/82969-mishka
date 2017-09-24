@@ -39,66 +39,57 @@
 
     <main class="page-main">
       <section class="catalog">
-        <h2 class="visually-hidden">Список товаров</h2>
-        <ul class="catalog__list">
-          <li class="catalog__item">
-            <article class="catalog__product product">
-              <a class="product__image-link" href="#">
-                <img class="product__image" src="http://placehold.it/260x195" alt="Товар «Зайчик-попрыгайчик»" width="260" height="195">
-              </a>
-              <div class="product__content">
-                <div class="product__description">
-                  <h3 class="product__title">
-                    <a class="product__link" href="#">Зайчик-попрыгайчик</a>
-                  </h3>
-                  <span class="product__info">Рост 30 см, вес 200 г</span>
-                </div>
-                <div class="product__buy">
-                  <span class="product__price">1 200 руб.</span>
-                  <button class="product__button" type="button">Положить товар в корзину</button>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li class="catalog__item">
-            <article class="catalog__product product">
-              <a class="product__image-link" href="#">
-                <img class="product__image" src="http://placehold.it/260x195" alt="Товар «Корзинка для белья»" width="260" height="195">
-              </a>
-              <div class="product__content">
-                <div class="product__description">
-                  <h3 class="product__title">
-                    <a class="product__link" href="#">Корзинка для белья</a>
-                  </h3>
-                  <span class="product__info">Диаметр 15 см, высота 10 см</span>
-                </div>
-                <div class="product__buy">
-                  <span class="product__price">690 руб.</span>
-                  <button class="product__button" type="button">Положить товар в корзину</button>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li class="catalog__item">
-            <article class="catalog__product product">
-              <a class="product__image-link" href="#">
-                <img class="product__image" src="http://placehold.it/260x195" alt="Товар «Большая корзинка для игрушек»" width="260" height="195">
-              </a>
-              <div class="product__content">
-                <div class="product__description">
-                  <h3 class="product__title">
-                    <a class="product__link" href="#">Большая корзинка для игрушек</a>
-                  </h3>
-                  <span class="product__info">Диаметр 30 см, высота 30 см</span>
-                </div>
-                <div class="product__buy">
-                  <span class="product__price">1 500 руб.</span>
-                  <button class="product__button" type="button">Положить товар в корзину</button>
-                </div>
-              </div>
-            </article>
-          </li>
-        </ul>
+        <article class="catalog__product product">
+          <a class="product__image-link" href="#">
+            <img class="product__image" src="http://placehold.it/260x195" alt="Товар «Зайчик-попрыгайчик»" width="260" height="195">
+          </a>
+          <div class="product__content">
+            <div class="product__description">
+              <h3 class="product__title">
+                <a class="product__link" href="#">Зайчик-попрыгайчик</a>
+              </h3>
+              <span class="product__info">Рост 30 см, вес 200 г</span>
+            </div>
+            <div class="product__buy">
+              <span class="product__price">1 200 руб.</span>
+              <button class="product__button" type="button">Положить товар в корзину</button>
+            </div>
+          </div>
+        </article>
+        <article class="catalog__product product">
+          <a class="product__image-link" href="#">
+            <img class="product__image" src="http://placehold.it/260x195" alt="Товар «Корзинка для белья»" width="260" height="195">
+          </a>
+          <div class="product__content">
+            <div class="product__description">
+              <h3 class="product__title">
+                <a class="product__link" href="#">Корзинка для белья</a>
+              </h3>
+              <span class="product__info">Диаметр 15 см, высота 10 см</span>
+            </div>
+            <div class="product__buy">
+              <span class="product__price">690 руб.</span>
+              <button class="product__button" type="button">Положить товар в корзину</button>
+            </div>
+          </div>
+        </article>
+        <article class="catalog__product product">
+          <a class="product__image-link" href="#">
+            <img class="product__image" src="http://placehold.it/260x195" alt="Товар «Большая корзинка для игрушек»" width="260" height="195">
+          </a>
+          <div class="product__content">
+            <div class="product__description">
+              <h3 class="product__title">
+                <a class="product__link" href="#">Большая корзинка для игрушек</a>
+              </h3>
+              <span class="product__info">Диаметр 30 см, высота 30 см</span>
+            </div>
+            <div class="product__buy">
+              <span class="product__price">1 500 руб.</span>
+              <button class="product__button" type="button">Положить товар в корзину</button>
+            </div>
+          </div>
+        </article>
       </section>
 
       <section class="about-work">
@@ -109,7 +100,7 @@
           </header>
           <video class="about-work__video" width="260" height="150" poster="http://placehold.it/260x150"  preload="none">
             Тег video не поддерживается вашим браузером.
-            <a href="#">Скачайть видео</a>.
+            <a href="#">Скачать видео</a>.
           </video>
           <div class="about-work__description">
             <p class="about-work__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
@@ -143,7 +134,7 @@
       <button class="modal__close" type="button">Закрыть модальное окно</button>
       <form class="modal__form form-add-cart" action="https://echo.htmlacademy.ru" method="post">
         <h2 class="form-add-cart__title">Добавить в корзину</h2>
-        <fieldset>
+        <fieldset class="form-add-cart__fieldset">
           <legend class="form-add-cart__legend">Выберите размер:</legend>
           <ul class="form-add-cart__list">
             <li class="form-add-cart__item">
