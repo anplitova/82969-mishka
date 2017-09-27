@@ -1,0 +1,35 @@
+.categories {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  list-style: none;
+
+  &__item {
+    &:first-child {
+      background-color: #63d1bb;
+    }
+
+    &:last-child {
+      background-color: #56c3b2;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 26px 58% 29px 29px;
+
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+    color: #ffffff;
+
+    opacity: 1;
+
+    transition: opacity 0.3s ease;
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
