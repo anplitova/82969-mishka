@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   </head>
   <body class="page">
     <header class="page-header">
@@ -89,7 +91,7 @@
             </a>
             <div class="special-product__buy">
               <span class="special-product__price">Цена: 990 руб.</span>
-              <a class="button special-product__button" href="#">Заказать</a>
+              <a class="button special-product__button js-modal-open-button" href="#" data-modal="modal-add-cart">Заказать</a>
             </div>
           </article>
       </section>
@@ -151,7 +153,7 @@
           </div>
         </div>
 
-        <div class="contacts__map">
+        <div class="contacts__map" id="mishka-map">
           <h3 class="visually-hidden">Магазин «Mishka» на карте</h3>
         </div>
 
@@ -162,49 +164,57 @@
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__socials socials">
-        <h2 class="visually-hidden">Магазин «Mishka» в социальных сетях</h2>
-        <ul class="socials__list">
-          <li class="socials__item">
-            <a class="socials__link" href="#">Instagram</a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link" href="#">Facebook</a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link" href="#">Twitter</a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <p class="copyright__text">Разработано <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></p>
+      <div class="page-footer__wrapper">
+        <div class="page-footer__socials socials">
+          <h2 class="visually-hidden">Магазин «Mishka» в социальных сетях</h2>
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link" href="#">Instagram</a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">Facebook</a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">Twitter</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <p class="copyright__text">Разработано <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></p>
+        </div>
       </div>
     </footer>
 
-    <div id="modal-add-cart" class="modal">
-      <button class="modal__close" type="button">Закрыть модальное окно</button>
-      <form class="modal__form form-add-cart" action="https://echo.htmlacademy.ru" method="post">
-        <h2 class="form-add-cart__title">Добавить в корзину</h2>
-        <fieldset class="form-add-cart__fieldset">
-          <legend class="form-add-cart__legend">Выберите размер:</legend>
-          <ul class="form-add-cart__list">
-            <li class="form-add-cart__item">
-              <input class="visually-hidden" id="size-s" type="radio" name="size" value="s">
-              <label class="form-add-cart__label" for="size-s">S</label>
-            </li>
-            <li class="form-add-cart__item">
-              <input class="visually-hidden" id="size-m" type="radio" name="size" value="m">
-              <label class="form-add-cart__label" for="size-m">M</label>
-            </li>
-            <li class="form-add-cart__item">
-              <input class="visually-hidden" id="size-l" type="radio" name="size" value="l">
-              <label class="form-add-cart__label" for="size-l">L</label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="button form-add-cart__button" type="submit">Добавить</button>
-      </form>
+    <div id="modal-add-cart" class="modal js-modal">
+      <div class="modal__overlay js-modal-overlay">
+        <div class="modal__content">
+          <button class="modal__close js-modal-close-button" type="button">Закрыть модальное окно</button>
+          <form class="modal__form form-add-cart" action="https://echo.htmlacademy.ru" method="post">
+            <h2 class="form-add-cart__title">Добавить в корзину</h2>
+            <fieldset class="form-add-cart__fieldset">
+              <legend class="form-add-cart__legend">Выберите размер:</legend>
+              <ul class="form-add-cart__list">
+                <li class="form-add-cart__item">
+                  <input class="visually-hidden form-add-cart__radio" id="size-s" type="radio" name="size" value="s" checked>
+                  <label class="form-add-cart__label" for="size-s">S</label>
+                </li>
+                <li class="form-add-cart__item">
+                  <input class="visually-hidden form-add-cart__radio" id="size-m" type="radio" name="size" value="m">
+                  <label class="form-add-cart__label" for="size-m">M</label>
+                </li>
+                <li class="form-add-cart__item">
+                  <input class="visually-hidden form-add-cart__radio" id="size-l" type="radio" name="size" value="l">
+                  <label class="form-add-cart__label" for="size-l">L</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="button button--submit form-add-cart__button" type="submit">Добавить</button>
+          </form>
+        </div>
+      </div>
     </div>
     <script src="js/menu.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>
