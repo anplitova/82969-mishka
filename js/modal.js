@@ -1,7 +1,7 @@
 'use strict';
 
 var modal = function() {
-  var modalOpenButton = document.querySelector('.js-modal-open-button');
+  var modalOpenButtons = Array.prototype.slice.call(document.querySelectorAll('.js-modal-open-button'), 0);
   var openModal;
   var modalCloseButton;
   var modalOverlay;
@@ -60,5 +60,7 @@ var modal = function() {
     modalOverlay.addEventListener('click', onModalOverlayClick);
   };
 
-  modalOpenButton.addEventListener('click', onModalOpenButtonClick);
+  modalOpenButtons.forEach(function (button) {
+    button.addEventListener('click', onModalOpenButtonClick);
+  });
 }();

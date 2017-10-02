@@ -9,7 +9,7 @@ function initMap () {
       controls: ['zoomControl']
     }),
     mishkaPlacemark = new ymaps.Placemark([59.938631, 30.323055], {
-      hintContent: 'Мазазин "Мишка"'
+      hintContent: 'Магазин "Мишка"'
     }, {
       iconLayout: 'default#image',
       iconImageHref: 'img/icon-map-pin.svg',
