@@ -1,0 +1,42 @@
+.modal {
+  visibility: hidden;
+}
+
+.modal.m-open {
+  visibility: visible;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+
+  background-color: rgba(255, 255, 255, 0.9);
+
+  opacity: 0;
+
+  transition: all 0.3s ease;
+}
+
+.modal.m-open .modal__overlay {
+  visibility: visible;
+
+  opacity: 1;
+}
+
+.modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.modal__close {
+  display: none;
+}

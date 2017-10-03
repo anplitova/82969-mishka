@@ -1,0 +1,30 @@
+.categories {
+  .reset-ul();
+  margin-top: 122px;
+}
+
+.categories__item {
+  &:first-child {
+    background-color: #63d1bb;
+  }
+
+  &:last-child {
+    background-color: #56c3b2;
+  }
+}
+
+.categories__link {
+  display: block;
+  padding: 26px 58% 29px 29px;
+
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  color: #ffffff;
+
+  transition: color 0.3s ease;
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

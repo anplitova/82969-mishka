@@ -1,0 +1,115 @@
+.main-menu__button {
+  position: absolute;
+  top: 27px;
+  right: 26px;
+
+  padding: 5px;
+
+  border: 0;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.main-menu__button-decoration {
+  width: 20px;
+  height: 14px;
+}
+
+.main-menu__button-line {
+  position: absolute;
+  right: 5px;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: #221f1f;
+
+  opacity: 1;
+  transform: rotate(0);
+
+  transition: all 0.3s ease;
+
+  &:nth-child(1) {
+    top: 5px;
+  }
+
+  &:nth-child(2),
+  &:nth-child(3) {
+    top: 11px;
+  }
+
+  &:nth-child(4) {
+    top: 17px;
+  }
+}
+
+.main-menu__button.m-open {
+  .main-menu__button-line {
+    &:nth-child(1),
+    &:nth-child(4) {
+      opacity: 0;
+    }
+
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.no-js .main-menu__nav {
+  position: static;
+
+  display: block;
+}
+
+.main-menu__nav {
+  position: absolute;
+  top: 79px;
+
+  display: none;
+  width: 100%;
+
+  background-color: #ffffff;
+}
+
+.main-menu__nav.m-open {
+  display: block;
+}
+
+.main-menu__list {
+  .reset-ul();
+}
+
+.main-menu__item {
+  border-bottom: 1px solid #ececec;
+
+  &:first-child {
+    border-top: 1px solid #ececec;
+  }
+}
+
+.main-menu__link {
+  display: block;
+  padding: 27px 0;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: #000000;
+  text-align: center;
+
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
