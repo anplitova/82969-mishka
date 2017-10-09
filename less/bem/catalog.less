@@ -3,9 +3,22 @@
 }
 
 .catalog__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   padding: 0 30px;
 }
 
 .catalog__product {
   margin-bottom: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__wrapper {
+    padding: 0 50px;
+  }
+
+  .catalog__product {
+    margin-bottom: 54px;
+  }
 }

@@ -3,10 +3,13 @@
 }
 
 .about-work__wrapper {
+  display: flex;
+  justify-content: space-around;
   padding: 0 30px;
 }
 
 .about-work__content {
+  width: 260px;
   padding-bottom: 32px;
 
   border: 1px solid #ececec;
@@ -39,4 +42,64 @@
 
 .about-work__button {
   width: 192px;
+}
+
+@media (min-width: @tablet-width) {
+  .about-work {
+    margin-bottom: 63px;
+  }
+
+  .about-work__wrapper {
+    padding: 0 50px;
+  }
+
+  .about-work__content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 0;
+
+    border: 0;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .about-work__header {
+    width: 100%;
+    border-right: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+  }
+
+  .about-work__title {
+    margin-top: 38px;
+    padding-left: 106px;
+
+    font-size: 20px;
+  }
+
+  .about-work__video {
+    order: -1;
+    width: 100%;
+    // TODO: потом удалить
+    height: 455px;
+    background-color: gray;
+  }
+
+  .about-work__description {
+    padding: 0 40px 45px 40px;
+
+    border-right: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+  }
+
+  .about-work__text {
+    margin-top: 9px;
+    margin-bottom: 35px;
+
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .about-work__button {
+    width: 100%;
+  }
 }
