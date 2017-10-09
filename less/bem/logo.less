@@ -4,10 +4,24 @@
   text-align: center;
 }
 
+.logo__image {
+  opacity: 1;
+
+  transition: opacity 0.3s ease;
+}
+
 .logo__link {
   display: inline-block;
   vertical-align: middle;
   margin-left: -3px;
 
   line-height: 0;
+
+  &[href]:hover .logo__image {
+    opacity: 0.6;
+  }
+
+  &[href]:active .logo__image {
+    opacity: 0.3;
+  }
 }

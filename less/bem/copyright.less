@@ -1,8 +1,38 @@
-.copyright__text {
-  margin: 0;
+.copyright {
+  text-align: center;
+}
+
+.copyright__logo {
+  font-size: 0;
+}
+
+.copyright__icon {
+  fill: #63d1bb;
+
+  transition: all 0.3s ease;
+}
+
+.copyright__link {
+  padding-right: 25px;
 
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
   color: #000000;
+
+  transition: color 0.3s ease;
+
+  &:hover {
+    .copyright__icon {
+      fill: #46c1ae;
+    }
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+
+    .copyright__icon {
+      opacity: 0.3;
+    }
+  }
 }

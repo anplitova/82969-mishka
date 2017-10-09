@@ -1,4 +1,36 @@
 .socials__list {
   .reset-ul();
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.socials__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  fill: #231f20;
+
+  transform: translate(-50%, -50%);
+
+  transition: all 0.3s ease;
+}
+
+.socials__link {
+  position: relative;
+
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  font-size: 0;
+
+  &:hover .socials__icon {
+    fill: #46c1ae;
+  }
+
+  &:active .socials__icon {
+    opacity: 0.3;
+  }
 }

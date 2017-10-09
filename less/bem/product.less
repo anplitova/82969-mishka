@@ -1,9 +1,13 @@
 .product {
   width: 260px;
-}
 
-.product:hover .product__content {
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  &:hover .product__content {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active .product__content {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .product__image-link {
@@ -13,7 +17,7 @@
 }
 
 .product__content {
-  padding: 0 28px;
+  padding: 0 28px 0 27px;
   box-sizing: border-box;
 
   background-color: #ffffff;
@@ -39,16 +43,16 @@
 }
 
 .product__link {
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
 
   transition: color 0.3s ease;
 
   &:hover {
-    coloe: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.6);
   }
 
   &:active {
-    coloe: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -61,7 +65,7 @@
 .product__buy {
   display: flex;
   justify-content: space-between;
-  padding: 21px 0 27px;
+  padding: 21px 0 19px;
 }
 
 .product__price {
@@ -71,12 +75,29 @@
   color: #000000;
 }
 
+.product__icon-cart {
+  fill: #231f20;
+
+  transition: all 0.3s ease;
+}
+
 .product__button {
   .reset-button() ;
-  width: 21px;
-  height: 19px;
+  position: relative;
 
-  background-color: red;
+  width: 40px;
+  height: 40px;
+  margin: -8px -11px 0 0;
+
+  cursor: pointer;
+
+  &:hover .product__icon-cart {
+    fill: #63d1bb;
+  }
+
+  &:active .product__icon-cart {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -94,14 +115,14 @@
 
   .product__content {
     display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
+    flex-direction: column;
     width: ~"calc(100% - 334px)";
     padding-left: 26px;
   }
 
   .product__description {
     width: 100%;
+    padding-bottom: 0;
 
     border-bottom: 0;
   }
@@ -118,6 +139,7 @@
 
   .product__buy {
     width: 100%;
+    margin-top: auto;
     padding: 22px 0 26px 5px;
 
     border-top: 1px solid #ececec;
@@ -125,5 +147,32 @@
 
   .product__price {
     font-size: 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product {
+    flex-direction: column;
+    width: 316px;
+  }
+
+  .product__image-link {
+    width: 316px;
+    // TODO: потом удалить
+    height: 462px;
+    background-color: gray;
+  }
+
+  .product__content {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .product__description {
+    margin-bottom: 14px;
+  }
+
+  .product__buy {
+    padding-left: 0;
   }
 }

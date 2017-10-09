@@ -50,7 +50,7 @@ var modal = function() {
   var onModalOpenButtonClick = function (evt) {
     evt.preventDefault();
 
-    var modalId = evt.target.dataset.modal;
+    var modalId = evt.currentTarget.dataset.modal;
     openModal = document.getElementById(modalId);
     modalCloseButton = openModal.querySelector('.js-modal-close-button');
     modalOverlay = openModal.querySelector('.js-modal-overlay');
