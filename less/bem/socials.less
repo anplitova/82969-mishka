@@ -3,18 +3,36 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-left: -6px;
 }
 
 .socials__icon {
   position: absolute;
-  top: 50%;
-  left: 50%;
 
   fill: #231f20;
 
-  transform: translate(-50%, -50%);
-
   transition: all 0.3s ease;
+
+  &--instagram {
+    top: 10px;
+    left: 9px;
+  }
+
+  &--facebook {
+    top: 4px;
+    left: 13px;
+  }
+
+  &--twitter {
+    top: 10px;
+    left: 9px;
+  }
+}
+
+.socials__item {
+  &:not(:last-child) {
+    margin-right: 19px;
+  }
 }
 
 .socials__link {

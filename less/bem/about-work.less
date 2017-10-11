@@ -5,17 +5,34 @@
 .about-work__wrapper {
   display: flex;
   justify-content: space-around;
+  max-width: 1050px;
+  margin: 0 auto;
   padding: 0 30px;
 }
 
 .about-work__content {
   width: 260px;
   padding-bottom: 32px;
+  box-sizing: border-box;
 
   border: 1px solid #ececec;
+
+  box-shadow: none;
+
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .about-work__title {
+  position: relative;
+
   margin: 25px 0 23px;
   padding-left: 89px;
 
@@ -23,6 +40,17 @@
   font-size: 17px;
   line-height: 24px;
   color: #000000;
+}
+
+.about-work__icon {
+  position: absolute;
+  top: 4px;
+  left: 33px;
+
+  display: inline-block;
+  vertical-align: middle;
+
+  fill: #63d1bb;
 }
 
 .about-work__video {
@@ -56,7 +84,7 @@
   .about-work__content {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 668px;
     padding-bottom: 0;
 
     border: 0;
@@ -76,6 +104,11 @@
     font-size: 20px;
   }
 
+  .about-work__icon {
+    top: -5px;
+    left: 41px;
+  }
+
   .about-work__video {
     order: -1;
     width: 100%;
@@ -87,6 +120,7 @@
   .about-work__description {
     width: 100%;
     padding: 0 40px 45px 40px;
+    box-sizing: border-box;
 
     border-right: 1px solid #ececec;
     border-left: 1px solid #ececec;
@@ -102,5 +136,53 @@
 
   .about-work__button {
     width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-work {
+    margin-bottom: 104px;
+  }
+
+  .about-work__content {
+    position: relative;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+
+  .about-work__header {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: ~"calc(100% - 682px)";
+  }
+
+  .about-work__title {
+    width: 150px;
+    margin-top: 42px;
+    padding-left: 79px;
+  }
+
+  .about-work__icon {
+    display: block;
+    margin-left: 2px;
+    margin-bottom: 22px;
+  }
+
+  .about-work__video {
+    width: 682px;
+  }
+
+  .about-work__description {
+    width: ~"calc(100% - 682px)";
+    padding: 167px 57px 0 79px;
+
+    border-top: 1px solid #ececec;
+  }
+
+  .about-work__text {
+    margin-bottom: 45px;
   }
 }
