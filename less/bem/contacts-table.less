@@ -18,3 +18,22 @@
     width: 78px;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .contacts-table {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+  }
+
+  .contacts-table__row {
+    &:nth-child(2) {
+      padding-right: 36px;
+    }
+  }
+
+  .contacts-table__cell {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}

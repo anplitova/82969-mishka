@@ -22,3 +22,17 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+@media (min-width: @tablet-width) {
+  .wrapper {
+    max-width: 768px;
+    padding: 0 50px;
+  }
+}

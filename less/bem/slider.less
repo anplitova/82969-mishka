@@ -14,10 +14,28 @@
   height: 52px;
   padding: 0;
 
+  font-size: 0;
+
   border: 1px solid #ececec;
   background-color: #ffffff;
 
   &--next {
     border-left: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .slider__buttons {
+    position: absolute;
+    right: 51px;
+    bottom: 49px;
+
+    margin-bottom: 0;
+  }
+
+  .slider__button {
+    width: 87px;
+
+    border: 0;
   }
 }

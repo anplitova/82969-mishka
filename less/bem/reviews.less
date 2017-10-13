@@ -3,10 +3,6 @@
   padding-bottom: 45px;
 }
 
-.reviews__wrapper {
-  padding: 0 30px;
-}
-
 .reviews__title {
   margin: 0 0 24px 0;
 
@@ -43,4 +39,49 @@
 .reviews__nick {
   font-size: 17px;
   line-height: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    padding-top: 31px;
+  }
+
+  .reviews__wrapper {
+    position: relative;
+
+    padding-top: 77px;
+    padding-bottom: 17px;
+
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .reviews__title {
+    margin-bottom: 49px;
+    margin-left: -5px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .reviews__text {
+    margin-bottom: 57px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .reviews__name {
+    margin-bottom: 4px;
+
+    font-size: 18px;
+  }
+
+  .reviews__button {
+    position: absolute;
+    top: 79px;
+    right: 50px;
+
+    width: 175px;
+  }
 }
