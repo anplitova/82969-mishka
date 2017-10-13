@@ -24,6 +24,7 @@ img {
 }
 
 .wrapper {
+  width: 320px;
   margin-right: auto;
   margin-left: auto;
   padding: 0 30px;
@@ -33,6 +34,14 @@ img {
 @media (min-width: @tablet-width) {
   .wrapper {
     max-width: 768px;
+    width: 100%;
+    padding: 0 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .wrapper {
+    max-width: 1150px;
     padding: 0 50px;
   }
 }
